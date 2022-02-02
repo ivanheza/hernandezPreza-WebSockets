@@ -1,0 +1,38 @@
+<div class="container w-75">
+
+   <h2>Productos</h2>
+   <table class="table">
+      <thead>
+         <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Imágen</th>
+         </tr>
+      </thead>
+      <tbody>
+
+         {{#each listaProductos}}
+            <tr>
+               <td>{{this.name}}</td>
+               <td>{{this.price}} </td>
+               <td>
+                  <img
+                     class="img-fluid"
+                     src={{this.image}}
+                     width="100"
+                     alt={{this.name}}
+                  />
+               </td>
+            </tr>
+         {{else}}
+            <tr>
+               <td class="text-center" colspan="3">
+                  <h1 class="fs-1 text-danger">No Hay Productos</h1>
+               </td>
+
+            </tr>
+         {{/each}}
+      </tbody>
+   </table>
+
+</div>
